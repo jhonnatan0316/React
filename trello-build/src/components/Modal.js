@@ -1,28 +1,74 @@
 import React from 'react';
-import TrelloCard from "./TrelloCard";
-import './Modal.css';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
+import Modal from '@material-ui/core/Modal';
 
-const modal = (props, cards) => {
-    return (
-        <div>
-            <div className="modal-wrapper"
-                style={{
-                    transform: props.show ? 'translateY(0vh)' : 'translateY(-100vh)',
-                    opacity: props.show ? '1' : '0'
-                }}>
-                <div className="modal-header">
-                    <h3>Card</h3>
-                    <span className="close-modal-btn" onClick={props.close}>×</span>
-                </div>
-                <div className="modal-body">
-                    <p>
-                        {props.children}
-               
-                                   </p>
-                </div>
-            </div>
-        </div>
-    )
+function rand() {
+  return Math.round(Math.random() * 20) - 10;
 }
 
-export default modal;
+function getModalStyle() {
+  const top = 50 + rand();
+  const left = 50 + rand();
+
+  return {
+    top: `${top}%`,
+    left: `${left}%`,
+    transform: `translate(-${top}%, -${left}%)`,
+  };
+}
+
+const styles = theme => ({
+  paper: {
+    position: 'absolute',
+    width: theme.spacing.unit * 50,
+    backgroundColor: theme.palette.background.paper,
+    boxShadow: theme.shadows[5],
+    padding: theme.spacing.unit * 4,
+    outline: 'none',
+  },
+});
+
+class SimpleModal extends React.Component {
+  state = {
+    open: false,
+  };
+
+  handleOpen = () => {
+    this.setState({ open: true });
+  };
+
+  handleClose = () => {
+    this.setState({ open: false });
+  };
+
+  render() {
+    const { classes } = this.props;
+    const { show } = this.props;
+    const { title, description, dateCreation, owner} = this.props;
+
+    return (
+      <div>
+        <Modal
+          aria-labelledby="simple-modal-title"
+          aria-describedby="simple-modal-description"
+          open={show}
+          onClose={this.handleClose}
+        >
+          <div style={getModalStyle()} className={classes.paper}>
+            <Typography variant="h6" id="modal-title">
+            {title}
+            </Typography>
+            <SimpleModalWrapped />
+          </div>
+        </Modal>
+      </div>
+    );
+  }
+}
+
+// We need an intermediary variable for handling the recursive nesting.
+const SimpleModalWrapped = withStyles(styles)(SimpleModal);
+
+export default SimpleModalWrapped;

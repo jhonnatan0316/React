@@ -14,7 +14,7 @@ const CardContainer = styled.div`
 `;
 
 
-const TrelloCard = React.memo(({ text, id, listID, index, dispatch }) => {
+const TrelloCard = React.memo(({ text, id, index}) => {
 
   const renderCard = () => {
     return (

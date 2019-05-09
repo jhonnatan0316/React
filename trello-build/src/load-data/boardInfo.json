@@ -1,0 +1,34 @@
+[
+    {
+    "title": "TO DO",
+    "id": "`list-${0}`",
+    "cards": [
+      {
+        "id": "`card-${0}`",
+        "text": "Implement a ReactJS web page with two columns and multiple cards (at least 2 cards)"
+      },
+      {
+        "id": "`card-${1}`",
+        "text": "All data should come from a JSON data file"
+      }
+    ]
+  },
+  {
+    "title": "DONE",
+    "id": "`list-${1}`",
+    "cards": [
+      {
+        "id": "`card-${2}`",
+        "text": "Card face should only display Title and Owner"
+      },
+      {
+        "id": "`card-${3}`",
+        "text": "Cards should be able to move between columns and within each column (order changes)"
+      },
+      {
+        "id": "`card-${4}`",
+        "text":
+          "Users should be able to look at the web app on a small, medium and large viewport"
+      }
+    ]
+  }]
