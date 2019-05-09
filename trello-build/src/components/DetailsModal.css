@@ -8,7 +8,7 @@
 }
 
 .modal-header {
-    background: #382627;
+    background: #263238;
     height: 40px;
     line-height: 40px;
     padding: 5px 20px;
@@ -42,9 +42,28 @@
 }
 
 .close-modal-btn:hover {
-    color: rgb(218, 42, 42);
+    color: black;
 }
 
+.btn-cancel, .btn-continue {
+    background: coral;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    outline: none;
+    padding: 10px;
+}
+
+.btn-cancel {
+    background-color: #b71c1c;
+    float: left;
+}
+
+.btn-continue {
+    background-color: #1b5e20;
+    float: right;
+}
 
 .back-drop {
     background-color: rgba(48, 49, 48, 0.42);
@@ -59,4 +78,3 @@
     padding: 10px;
     font-weight: bold;
 }
-

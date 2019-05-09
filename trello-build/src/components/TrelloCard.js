@@ -13,8 +13,7 @@ const CardContainer = styled.div`
   word-wrap: break-word;
 `;
 
-
-const TrelloCard = React.memo(({ text, id, index}) => {
+const TrelloCard = React.memo(({ title, description, id, owner, createdDate, index}) => {
 
   const renderCard = () => {
     return (
@@ -27,7 +26,10 @@ const TrelloCard = React.memo(({ text, id, index}) => {
             >
               <Card>
                 <CardContent>
-                  <Typography>{text}</Typography>
+                <Typography>{title}</Typography>
+                  <Typography>{description}</Typography>
+                  <Typography>{owner}</Typography>
+                  <Typography>{createdDate}</Typography>
                 </CardContent>
               </Card>
             </CardContainer>

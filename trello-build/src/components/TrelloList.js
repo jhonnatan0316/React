@@ -52,7 +52,10 @@ const TrelloList = ({ title, cards, listID, index, dispatch }) => {
                 {cards.map((card, index) => (
                   <TrelloCard
                     key={card.id}
-                    text={card.text}
+                    title={card.title}
+                    description={card.description}
+                    owner={card.owner}
+                    createdDate={card.createdDate}
                     id={card.id}
                     index={index}
                     listID={listID}

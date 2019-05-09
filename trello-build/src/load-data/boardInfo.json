@@ -5,11 +5,17 @@
     "cards": [
       {
         "id": "`card-${0}`",
-        "text": "Implement a ReactJS web page with two columns and multiple cards (at least 2 cards)"
+        "title":"task 1",
+        "description": "Implement a ReactJS web page with two columns and multiple cards (at least 2 cards)",
+        "createdDate":  "05/09/2019",
+        "owner": "Heider"
       },
       {
         "id": "`card-${1}`",
-        "text": "All data should come from a JSON data file"
+        "title":"task 2",
+        "description": "All data should come from a JSON data file",
+        "createdDate":  "05/09/2019",
+        "owner": "Sebastian"
       }
     ]
   },
@@ -19,16 +25,25 @@
     "cards": [
       {
         "id": "`card-${2}`",
-        "text": "Card face should only display Title and Owner"
+        "title":"task 3",
+        "description": "Card face should only display Title and Owner",
+        "createdDate":  "05/09/2019",
+        "owner": "Diego"
       },
       {
         "id": "`card-${3}`",
-        "text": "Cards should be able to move between columns and within each column (order changes)"
+        "title":"task 4",
+        "description": "Cards should be able to move between columns and within each column (order changes)",
+        "createdDate":  "05/09/2019",
+        "owner": "Miguel"
       },
       {
         "id": "`card-${4}`",
-        "text":
-          "Users should be able to look at the web app on a small, medium and large viewport"
+        "title":"task 5",
+        "description":
+          "Users should be able to look at the web app on a small, medium and large viewport",
+          "createdDate":  "05/09/2019",
+          "owner": "Henry"
       }
     ]
   }]
